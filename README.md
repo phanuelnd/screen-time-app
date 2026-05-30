@@ -39,10 +39,6 @@ All four targets share data through an App Group (`group.com.focusshield.shared`
 - FamilyControls / DeviceActivity / ManagedSettings / ManagedSettingsUI
 - Deployment target: iOS 18.0
 
-## Getting started
-
-See [SETUP.md](SETUP.md) for build instructions. TL;DR: open in Xcode, set your team on all 4 targets, run on a physical device (simulator doesn't support Screen Time APIs).
-
 ## Contributing
 
 The codebase is pretty small and straightforward. A few areas that could use work:
