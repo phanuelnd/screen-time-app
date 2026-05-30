@@ -22,7 +22,7 @@ final class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     ) {
         super.eventDidReachThreshold(event, activity: activity)
 
-        guard event == .whatsAppThresholdReached else { return }
+        guard event == .usageThresholdReached else { return }
 
         let defaults = UserDefaults(suiteName: AppGroupConstants.suiteName)
         if let data = defaults?.data(forKey: AppGroupConstants.selectedAppsKey),
@@ -33,11 +33,11 @@ final class DeviceActivityMonitorExtension: DeviceActivityMonitor {
 }
 
 extension DeviceActivityEvent.Name {
-    static let whatsAppThresholdReached = Self("com.focusshield.whatsapp.threshold")
+    static let usageThresholdReached = Self("com.focusshield.usage.threshold")
 }
 
 extension DeviceActivityName {
-    static let dailyWhatsApp = Self("com.focusshield.daily.whatsapp")
+    static let dailyUsage = Self("com.focusshield.daily.usage")
 }
 
 enum AppGroupConstants {

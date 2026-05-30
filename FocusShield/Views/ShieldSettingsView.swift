@@ -31,7 +31,7 @@ struct ShieldSettingsView: View {
                 } header: {
                     Text("Apps")
                 } footer: {
-                    Text("Choose WhatsApp (or any apps you want to limit).")
+                    Text("Browse and choose any apps you want to limit.")
                 }
 
                 Section {

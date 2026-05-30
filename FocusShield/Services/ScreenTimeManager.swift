@@ -43,9 +43,9 @@ final class ScreenTimeManager {
         let center = DeviceActivityCenter()
         do {
             try center.startMonitoring(
-                .dailyWhatsApp,
+                .dailyUsage,
                 during: schedule,
-                events: [.whatsAppThresholdReached: event]
+                events: [.usageThresholdReached: event]
             )
             saveSettings()
         } catch {
@@ -55,7 +55,7 @@ final class ScreenTimeManager {
 
     func stopMonitoring() {
         let center = DeviceActivityCenter()
-        center.stopMonitoring([.dailyWhatsApp])
+        center.stopMonitoring([.dailyUsage])
         store.shield.applications = nil
     }
 
@@ -98,9 +98,9 @@ final class ScreenTimeManager {
 }
 
 extension DeviceActivityName {
-    static let dailyWhatsApp = Self("com.focusshield.daily.whatsapp")
+    static let dailyUsage = Self("com.focusshield.daily.usage")
 }
 
 extension DeviceActivityEvent.Name {
-    static let whatsAppThresholdReached = Self("com.focusshield.whatsapp.threshold")
+    static let usageThresholdReached = Self("com.focusshield.usage.threshold")
 }

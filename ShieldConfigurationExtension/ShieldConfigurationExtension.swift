@@ -9,9 +9,9 @@ final class ShieldConfigurationExtension: ShieldConfigurationDataSource {
 
         let subtitleText: String
         if let suggestion {
-            subtitleText = "How about instead: \(suggestion)\n\nDo you REALLY REALLY REALLY need WhatsApp right now?"
+            subtitleText = "How about instead: \(suggestion)\n\nDo you REALLY REALLY REALLY need this app right now?"
         } else {
-            subtitleText = "You've used up your daily limit.\n\nDo you REALLY REALLY REALLY need WhatsApp right now?"
+            subtitleText = "You've used up your daily limit.\n\nDo you REALLY REALLY REALLY need this app right now?"
         }
 
         return ShieldConfiguration(
